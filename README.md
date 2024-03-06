@@ -141,3 +141,41 @@ wandb: (3) Don't visualize my results`
 
 3. checkpoint로 이어서 학습하기
 `  --resume_from_checkpoint=/sddata/finetune/lora/pokemon/checkpoint-5000`
+
+
+---
+## 가중치 사용
+
+```
+from diffusers import StableDiffusionPipeline
+import torch
+device = "cuda"
+
+# load model
+
+model_path = "/sddata/finetune/lora/pokemon/checkpoint-12000/pytorch_lora_weights.safetensors"
+
+pipe = StableDiffusionPipeline.from_pretrained(
+    "runwayml/stable-diffusion-v1-5",
+    torch_dtype=torch.float16,
+    safety_checker=None,
+    feature_extractor=None,
+    requires_safety_checker=False
+)
+
+# load lora weights
+pipe.unet.load_attn_procs(model_path)
+# set to use GPU for inference
+pipe.to(device)
+
+# generate image
+prompt = "a drawing of girrafe pokemon"
+image = pipe(prompt, num_inference_steps=30).images[0]
+# save image
+image.save("image.png")
+
+image
+```
+
+
+
