@@ -45,6 +45,40 @@ limitations under the License.
 - Interchangeable noise [schedulers](https://huggingface.co/docs/diffusers/api/schedulers/overview) for different diffusion speeds and output quality.
 - Pretrained [models](https://huggingface.co/docs/diffusers/api/models/overview) that can be used as building blocks, and combined with schedulers, for creating your own end-to-end diffusion systems.
 
+
+---
+license: creativeml-openrail-m
+library_name: diffusers
+tags:
+- stable-diffusion
+- stable-diffusion-diffusers
+- text-to-image
+- diffusers
+- diffusers-training
+- lora
+base_model: runwayml/stable-diffusion-v1-5
+inference: true
+---
+
+<!-- This model card has been generated automatically according to the information the training script had access to. You
+should probably proofread and complete it, then remove this comment. -->
+
+
+# LoRA text2image fine-tuning - ho1iday/pokemon-lora
+These are LoRA adaption weights for runwayml/stable-diffusion-v1-5. The weights were fine-tuned on the lambdalabs/pokemon-blip-captions dataset. You can find some example images in the following. 
+
+![image](https://github.com/harim061/Stable-Diffusion-FT/assets/90364684/fd34942c-ff0e-443a-9235-01a7c4b75bb2)
+
+![image](https://github.com/harim061/Stable-Diffusion-FT/assets/90364684/22ca3d0d-7d10-49c9-a225-1197e9d8d5c1)
+
+![image](https://github.com/harim061/Stable-Diffusion-FT/assets/90364684/6b3e44e2-b929-47b2-8f52-2a3a68417463)
+
+![image](https://github.com/harim061/Stable-Diffusion-FT/assets/90364684/9a5ca53d-6748-465d-b4a7-593cf5277b1d)
+
+
+# how to use?
+[here](https://github.com/harim061/Stable-Diffusion-FT/blob/main/docs/how_to.md)
+
 ## Installation
 
 We recommend installing 🤗 Diffusers in a virtual environment from PyPI or Conda. For more details about installing [PyTorch](https://pytorch.org/get-started/locally/) and [Flax](https://flax.readthedocs.io/en/latest/#installation), please refer to their official documentation.
