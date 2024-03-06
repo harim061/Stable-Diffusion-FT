@@ -133,7 +133,9 @@ wandb: (3) Don't visualize my results`
   
 2. `safetensors_rust.SafetensorError: Error while serializing: IoError(Os { code: 28, kind: StorageFull, message: "No space left on device" })`
 - device 메모리 부족 오류.
-- 해결 : checkpoint step증가 
+- 해결 : checkpoint step증가
+- 용량 확인 방법 `du -sh 경로`
+- 사용하지 않는 checkpoint dir 삭제 `rm -rf 이름`
 
 3. checkpoint로 이어서 학습하기
 `  --resume_from_checkpoint=/sddata/finetune/lora/pokemon/checkpoint-5000`
