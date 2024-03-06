@@ -408,6 +408,7 @@ def main():
     vae.to(accelerator.device, dtype=weight_dtype)
     image_encoder.to(accelerator.device, dtype=weight_dtype)
 
+    # 훈련 스트립트 조정해야 하는 경우 여기서 조절 
     lora_attn_procs = {}
     for name in unet.attn_processors.keys():
         cross_attention_dim = None if name.endswith("attn1.processor") else unet.config.cross_attention_dim
