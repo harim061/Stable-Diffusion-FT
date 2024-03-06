@@ -124,6 +124,8 @@ DATASET_NAME: 사용할 데이터셋의 이름을 지정
 - vim으로 script 수정 후 실행
 ex) `./script.sh`
 
+![image](https://github.com/harim061/Stable-Diffusion-FT/assets/90364684/2d264d28-424f-4121-a7b2-4a9546cbfda8)
+
 --- 
 발생했던 오류 및 이슈
 1. `wandb: (1) Create a W&B account
