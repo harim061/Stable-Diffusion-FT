@@ -177,6 +177,3 @@ image.save("image.png")
 image
 ```
 
-
-
->>>>>>> e02a2ca0c899f3aeccfc964f4e36f02470be04ef
